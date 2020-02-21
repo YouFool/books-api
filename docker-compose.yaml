@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  books:
+    container_name: books-api
+    build:
+      context: ./books-api/
+      dockerfile: Dockerfile
+    image: books-api:latest
+    ports:
+      - "8085:8085"
+    restart: always
+  frontend:
+    container_name: books-frontend
+    build:
+    context: ./books-frontend/
+    dockerfile: Dockerfile
+    image: books-frontend:latest
+    ports:
+      - "3000:3000"
