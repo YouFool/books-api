@@ -13,8 +13,8 @@ services:
   frontend:
     container_name: books-frontend
     build:
-    context: ./books-frontend/
-    dockerfile: Dockerfile
+      context: ./books-frontend/
+      dockerfile: Dockerfile
     image: books-frontend:latest
     ports:
-      - "3000:3000"
+      - "80:80"
